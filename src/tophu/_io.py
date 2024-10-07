@@ -310,7 +310,8 @@ class HDF5Dataset(DatasetReader, DatasetWriter):
                 )
                 chunks = dataset.chunks
         else:
-            errmsg = textwrap.dedent("""
+            errmsg = textwrap.dedent(
+                """
                 the supplied arguments don't match any valid overload of HDF5Dataset
 
                 The arguments must match one of the following supported overloads:
@@ -324,7 +325,8 @@ class HDF5Dataset(DatasetReader, DatasetWriter):
                         dtype: numpy.typing.DTypeLike,
                         **kwargs,
                     )
-            """).strip()
+            """
+            ).strip()
             raise TypeError(errmsg)
 
         # Workaround for `frozen=True`.
@@ -534,7 +536,8 @@ class RasterBand(DatasetReader, DatasetWriter):
             mode = "w+"
             count = 1
         else:
-            errmsg = textwrap.dedent("""
+            errmsg = textwrap.dedent(
+                """
                 the supplied arguments don't match any valid overload of RasterBand
 
                 The arguments must match one of the following supported overloads:
@@ -557,7 +560,8 @@ class RasterBand(DatasetReader, DatasetWriter):
                         transform: rasterio.transform.Affine | None = None,
                         **options: dict[str, Any],
                     )
-            """).strip()
+            """
+            ).strip()
             raise TypeError(errmsg)
 
         # Create the dataset if it didn't exist.
