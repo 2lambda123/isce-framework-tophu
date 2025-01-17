@@ -45,7 +45,7 @@ repos:
       - id: numpydoc-validation
 
   - repo: https://github.com/hadialqattan/pycln
-    rev: "v2.4.0"
+    rev: "v2.5.0"
     hooks:
       - id: pycln
 
